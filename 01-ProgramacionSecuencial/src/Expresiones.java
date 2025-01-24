@@ -9,7 +9,6 @@ public class Expresiones {
         double a=0.0, y=0.0, z=0.0, x=0.0, b=0.0;
         String salida= "";
         a= Double.parseDouble(JOptionPane.showInputDialog("Introduce el valor de a:"));
-
         y= Double.parseDouble(JOptionPane.showInputDialog("Introduce el valor de y:"));
         z= Double.parseDouble(JOptionPane.showInputDialog("Introduce el valor de z:"));
         x= Double.parseDouble(JOptionPane.showInputDialog("Introduce el valor de x:"));
