@@ -2,12 +2,7 @@ import javax.swing.*;
 
 public class ConversionDePiesAYardasPulgadasCentimetrosYMetros {
     public static void main(String[] args) {
-        // Declaracion de constantes
-        final double FACTOR_CONVERSION_YARDA= 0.333;
-        final double FACTOR_CONVERSION_PULGADA= 12.0;
-        final double FACTOR_CONVERSION_CENTIMETROS= 30.48;
-        final double FACTOR_CONVERSION_METROS=0.3048;
-        // Declaracion de variable a convertir
+        // Declaracion de variables a convertir
         double numero1=0.0;
         double respuestaYarda= 0.0;
         double respuestaPulgada=0.0;
@@ -20,10 +15,10 @@ public class ConversionDePiesAYardasPulgadasCentimetrosYMetros {
         numero1= Double.parseDouble(JOptionPane.showInputDialog("Introduce el numero que desea convertir en pies:"));
 
         // Proceso de conversion
-        respuestaYarda= numero1 * FACTOR_CONVERSION_YARDA;
-        respuestaPulgada= numero1 * FACTOR_CONVERSION_PULGADA;
-        respuestaCentimetro=numero1 * FACTOR_CONVERSION_CENTIMETROS;
-        respuestaMetros=numero1 * FACTOR_CONVERSION_METROS;
+        respuestaYarda= numero1/ 3.0;
+        respuestaPulgada= numero1 * 12.0;
+        respuestaCentimetro=(respuestaPulgada * 2.54);
+        respuestaMetros=(respuestaPulgada * 2.54) /100.0 ;
 
         //Proceso de salida o resultado de las operaciones
         salida= numero1+ ": " +

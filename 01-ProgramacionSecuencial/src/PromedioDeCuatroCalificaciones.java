@@ -24,8 +24,8 @@ public class PromedioDeCuatroCalificaciones {
         promedio= (calif1 + calif2 + calif3 + calif4)/ 4;
 
         //Proceso de salida de datos
-        salida= "El promedio del alumno(a): " + nombreAlumno +  "\n "  + "Con matricula: " + matricula + "\n " + "con las siguientes calificaciones: " +
-                "\n " + calif1 + "\n  " + calif2 + "\n " + calif3 + "\n " + calif4 + "\n " + " es: " +  promedio;
+        salida= "El promedio del alumno(a): " + nombreAlumno +  "\n"  + "Con matricula: " + matricula + "\n" + "con las siguientes calificaciones: " +
+                "\n" + calif1 + "\n" + calif2 + "\n" + calif3 + "\n" + calif4 + "\n" + "es: " +  promedio;
         JOptionPane.showMessageDialog(null, salida);
     }
 }
