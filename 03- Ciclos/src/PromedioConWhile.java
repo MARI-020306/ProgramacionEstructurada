@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class PromedioConWhile {
     public static void main(String[] args) {
+        //Declaracion de variables
         int numCalif=0;
         double calif=0.0;
         double promedio=0.0;
@@ -16,7 +17,9 @@ public class PromedioConWhile {
             promedio+=calif;
             i++;
         }
-        promedio/=numCalif;
+        promedio/=numCalif; //Calcular promedio
+
+        //Salida de datos
         JOptionPane.showMessageDialog(null, "El promedio del alumno es: " + promedio);
     }
 }

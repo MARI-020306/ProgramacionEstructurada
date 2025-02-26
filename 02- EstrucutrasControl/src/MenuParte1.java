@@ -87,6 +87,8 @@ public class MenuParte1 {
 
         }
         public static void jugar(){
+
+            //Creacion y uso de un metodo
             String pregunta= "¿Colon descubrio America?";
             String resp= JOptionPane.showInputDialog((pregunta + "Si/No"));
             if (resp.equalsIgnoreCase("Si")){

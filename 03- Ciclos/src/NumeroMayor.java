@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class NumeroMayor {
     public static void main(String[] args) {
+        //Declaracion de variables
         int numero=0,total=0,numMayor=0;
         int i=0;
         //Solicitar la cantidad de numeros
@@ -18,6 +19,7 @@ public class NumeroMayor {
             }
             i++;
         }
+        //Salida de datos
         JOptionPane.showMessageDialog(null, "El numero mayor es: " + numMayor);
     }
 }

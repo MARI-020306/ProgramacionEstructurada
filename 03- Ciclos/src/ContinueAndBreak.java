@@ -7,19 +7,22 @@ public class ContinueAndBreak {
         int numero=0;
         int n=0;
 
+        //Entrada de datos
         n=Integer.parseInt(JOptionPane.showInputDialog("Introduce el total de numeros a ingresar"));
 
-        for (int i=1; i<=n; i++){
+        for (int i=1; i<=n; i++){ //Inicia for
             numero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero" + i));
 
+            //Condiciones a cumplir
             if (numero==0){
                 continue;
             }
             if (numero<0){
                 break;
             }
-            suma+=numero;
+            suma+=numero; //Acumulacion de datos para sumarlos
         }
+        //Salida de datos
         JOptionPane.showMessageDialog(null, "La suma del numero es: " + suma);
     }
 }

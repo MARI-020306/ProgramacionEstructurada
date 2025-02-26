@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class CalificacionMediaYBaja {
     public static void main(String[] args) {
+        //Declaracion de variables
         double n=0.0,suma=0.0,califBaja=0.0;
         int calif;
         //Solicitar el numero de calificaciones
@@ -16,7 +17,9 @@ public class CalificacionMediaYBaja {
                 califBaja=n;
             }
             suma=suma + n;
-        }
+        }//Cierra for
+
+        //Salida de resultados
         JOptionPane.showMessageDialog(null, "La calificacion media es: " + String.format("%.2f",suma/calif) +
                 "\nLa calificacion mas baja es: " + String.format("%.2f",califBaja));
     }

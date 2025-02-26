@@ -10,13 +10,17 @@ public class Empresa {
         double salarioTotal=0.0;
         String salida="";
 
+        //Entrada de datos
         numTrabajadores=Integer.parseInt(JOptionPane.showInputDialog("Introduce el numero de trabajadores:"));
+
+        //Tabla de salida de datos
         salida="Reporte de salarios semanales\n" +
                 "Empleado             " + "Horas Trabajadas             " + "Horas Extras            " + "Salario Total\n";
         i=1;
-        while (i<=numTrabajadores){
+        while (i<=numTrabajadores){ //Inicia while
             numHorasTrabajadas=Integer.parseInt(JOptionPane.showInputDialog("Introduce el numero de horas trabajadas:"));
            numHorasExtras=0;
+           //Condiciones a cumplir
             if (numHorasTrabajadas<=40){
                 salarioTotal=numHorasTrabajadas * 20;
                 salida+="Empleado " + i + "              " + numHorasTrabajadas + "               " + numHorasExtras + "               " + salarioTotal + "\n";
@@ -27,7 +31,9 @@ public class Empresa {
             }
 
             i++;
-        }
+        } //Cierra while
+
+        //Salida de datos
         JOptionPane.showMessageDialog(null, salida);
     }
 }

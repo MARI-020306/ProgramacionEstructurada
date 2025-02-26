@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class CalificacionesAcumulativas {
     public static void main(String[] args) {
+        //Declaracion de variables
         int numCalif=0;
         double calif=0.0;
         double promedio=0.0;
@@ -13,7 +14,9 @@ public class CalificacionesAcumulativas {
             //Acumular calificaciones
             promedio+=calif;
         }
-        promedio/=numCalif;
+        promedio/=numCalif; //Calcular promedio
+
+        //Salida de resultados
         JOptionPane.showMessageDialog(null, "El promedio del alumno es: " + String.format("%.1f",promedio));
     }
 }

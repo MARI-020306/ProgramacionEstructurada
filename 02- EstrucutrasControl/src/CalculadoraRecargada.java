@@ -7,6 +7,7 @@ public class CalculadoraRecargada {
         double numero1=0.0, numero2=0.0;
         String opcion= "", resultado="";
 
+        //Creacion de menu interactivo
         menu= "MENU PRINCIPAL\n" +
                 "a) Sumar\n " +
                 "b) Restar\n" +
@@ -16,12 +17,15 @@ public class CalculadoraRecargada {
                 "Elegir una opcion";
 
         opcion= (JOptionPane.showInputDialog(menu));
+
+        //Entrada de datos
         numero1= Double.parseDouble(JOptionPane.showInputDialog("Introduce el numero 1"));
         numero2= Double.parseDouble(JOptionPane.showInputDialog("Introduce el numero 2"));
         opcion=opcion.toLowerCase();
 
+        //Condiciones a cumplir
         if (numero2>0.0) {
-            switch (opcion) {
+            switch (opcion) {//Incia switch y los casos que se mandaran llamar en el menu
                 case "a":
                 case "A":
                     //suma
@@ -49,10 +53,12 @@ public class CalculadoraRecargada {
                 default:
                     resultado= "Caso NO valido";
 
-            }
+            }//cierra switch
+
+            //Salida de datos
             JOptionPane.showMessageDialog(null, resultado);
 
-        }else {
+        }else { //Validar solo datos positivos
             JOptionPane.showMessageDialog(null, "El numero 2 no puede ser 0 o negativo");
         }
 

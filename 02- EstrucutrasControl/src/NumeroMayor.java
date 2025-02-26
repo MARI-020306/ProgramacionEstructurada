@@ -17,9 +17,11 @@ import javax.swing.*;
 
         numero= Double.parseDouble(JOptionPane.showInputDialog("Introduce un numero"));
 
+        //Uso de operador ternario
        salida= (numero>10)?"El numero es mayor a 10": "El numero es menor a 10";
        JOptionPane.showMessageDialog(null, salida);
 
+       //Condiciones a cumplir
        if (numero>10){
            salida= "El numero es mayor a 10";
        }else{

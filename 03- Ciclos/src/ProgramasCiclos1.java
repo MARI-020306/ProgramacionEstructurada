@@ -20,6 +20,7 @@ public class ProgramasCiclos1 {
 
              switch (opcion) {
                  case "1":
+                     //Declaracion de variables
                      int numCalif=0;
                      double calif=0.0;
                      double promedio=0.0;
@@ -31,10 +32,12 @@ public class ProgramasCiclos1 {
                          //Acumular calificaciones
                          promedio+=calif;
                      }
+                     //Calcular promedio y salida de datos
                      promedio/=numCalif;
                      JOptionPane.showMessageDialog(null, "El promedio del alumno es: " + promedio);
                      break;
                  case "2":
+                     //Declaracion de variables
                      String nombre="";
                      String salida="";
                      int numVendedores=0;
@@ -43,69 +46,82 @@ public class ProgramasCiclos1 {
                      double sueldoTotal=0.0;
                      double v1=0.0, v2=0.0, v3=0.0;
 
+                     //Entrada de datos
                      numVendedores=Integer.parseInt(JOptionPane.showInputDialog("Introduce el numero de vendedores: "));
                      sueldoBase=Double.parseDouble(JOptionPane.showInputDialog("Introduce el sueldo base"));
 
+                     //Manera en la que se imprimira la salida
                      salida="Nombre       Comision        Sueldo total\n";
 
                      int i=1;
-                     while(i<=numVendedores){
+                     while(i<=numVendedores){ //Inicia while
+                         //Entrada de datos del vendedor
                         nombre=JOptionPane.showInputDialog("Introduce el nombre del vendedor " + i);
                         v1=Double.parseDouble(JOptionPane.showInputDialog("Introduce la venta 1"));
                         v2=Double.parseDouble(JOptionPane.showInputDialog("Introduce la venta 2"));
                         v3=Double.parseDouble(JOptionPane.showInputDialog("Introduce la venta 3"));
 
-                        comision= (v1+v2+v3) * 0.10;
+                        comision= (v1+v2+v3) * 0.10; //Resolucion de operaciones
 
-                        sueldoTotal= sueldoBase + comision;
+                        sueldoTotal= sueldoBase + comision; //Calculo de sueldo total
 
                         salida+= nombre + "                 "+ comision + "                 " + sueldoTotal + "\n";
                         i++;
                      }
+                     //Salida de datos
                      JOptionPane.showMessageDialog(null, salida);
                      break;
                  case "3":
                       //Tienda de bolitas
+                     //Declaracion de variables
                      String respuesta="", resultado="";
                      String tipoBolita="";
                      boolean sentinel2= true;
                      double totalCompra=0.0;
                      double descuento=0.0, importe=0.0, total=0.0;
+                     //Menu interactivo
                      String menuBolitas= "Tombola\n" +
                              "a) Bolita Roja\n" +
                              "b) Bolita Amarilla\n" +
                              "c) Bolita Blanca\n" +
                              "Elegir Opcion";
+                     //Manera en que se vera la impresion final
                      resultado="Total de ventas\n" +
                              "Total a pagar                     " + "Descuento                  " + "Importe     s       \n";
-                     do {
-                        totalCompra=Double.parseDouble(JOptionPane.showInputDialog("Introduce el total de la compra"));
-                        tipoBolita=JOptionPane.showInputDialog(menuBolitas);
+                     do { //Abre do while
+                         //Entrada de datos
+                         totalCompra = Double.parseDouble(JOptionPane.showInputDialog("Introduce el total de la compra"));
+                         tipoBolita = JOptionPane.showInputDialog(menuBolitas);
 
-                       if (tipoBolita.equalsIgnoreCase("a" )|| tipoBolita.equalsIgnoreCase("b") || tipoBolita.equalsIgnoreCase("c")){
-                           if (tipoBolita.equalsIgnoreCase("a")){
-                               descuento= totalCompra * 0.40;
-                           }else if (tipoBolita.equalsIgnoreCase("b")){
-                               descuento= totalCompra * 0.25;
-                           }else {
-                               descuento= 0.0;
+                         //Condiciones a cumplir para conocer el descuento
+                       if (tipoBolita.equalsIgnoreCase("a" )|| tipoBolita.equalsIgnoreCase("b") || tipoBolita.equalsIgnoreCase("c")) {
+                           if (tipoBolita.equalsIgnoreCase("a")) {
+                               descuento = totalCompra * 0.40;
+                           } else if (tipoBolita.equalsIgnoreCase("b")) {
+                               descuento = totalCompra * 0.25;
+                           } else {
+                               descuento = 0.0;
                            }
 
+                           //Realizacion de operaciones
                            importe= totalCompra-descuento;
                            total+=importe;
 
                            resultado+=totalCompra + "            " + descuento + "                 " + importe + "\n";
 
-                       }else{
+                       }else{ //Validacion de datos permitidos
                            JOptionPane.showMessageDialog(null,"Bolita NO valida");
                        }
+                       //Preguntar si el usuario desea salir o continuar comprando
                        salida=JOptionPane.showInputDialog(null, "Deseas cerrar la caja si/no");
                        if (salida.equalsIgnoreCase("si")){
                            sentinel2=false;
                        }
                      }while (sentinel2);
 
-                     resultado+="Total: " + total;
+                     resultado+="Total: " + total; //Calculo de la compra
+
+                     //Salida de datos
                      JOptionPane.showMessageDialog(null, resultado);
                      break;
                  case "4":
